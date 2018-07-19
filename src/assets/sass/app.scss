@@ -1,7 +1,35 @@
-
-
-body{
-    background-color: aqua;
+.sppedy-container{
+    margin: 10px;
 }
-
+.speedy-margin-0{
+    margin: 0px;
+    padding: 0px;
+}
+.speedy-margin-1{
+    margin: 1px;
+}
+.speedy-margin-5{
+    margin: 5px;
+}
+.speedy-margin-10{
+    margin: 1px;
+}
+.speedy-list{
+    font-style: italic;
+    color:#59086b;
+}
+.speedy-list-item{
+    margin-top: 1px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.speedy-list-item .text{ 
+    margin-left: 10px;
+    font-size: 10px;
+    font-style: italic;
+}
+.speedy-list-item .number{ 
+    font-size: 13px;
+    margin-left: 2px;
+}
 @import "scaffold";

@@ -1,23 +1,370 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>speedy</title>
-<link rel="stylesheet" href="assets/css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="./assets/lib/angular/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="./assets/lib/angular/angular.min.js"></script>
+    <script src="./assets/lib/angular/angular-animate.min.js"></script>
+    <script src="./assets/lib/angular/angular-aria.min.js"></script>
+    <script src="./assets/lib/angular/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="./assets/lib/angular/angular-material.min.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="./assets/js/controller.js"></script>
+    <link rel="stylesheet" href="./assets/css/app.css">
 </head>
-<body>
- <div class="container">
-        <div class="col-md-12">
-                <h1>jefjwneif
-                    efijnjdnvvnw
-                    njwevjneve
-                    enwengje
-                    fksjfksjfksfjfjsj</h1>
-            </div>
-    <div class="col-md-2">
-        <h1>jfksjfksjfksfjfjsj</h1>
+
+<body ng-app="speedy">
+    <div ng-controller="MyController" class="sppedy-container">
+        <md-content>
+            <md-select class="speedy-margin-0" placeholder="Assign to bulan" ng-model="bulan" md-on-open="loadBulans()" style="min-width: 200px;">
+                <md-option ng-value="bulan" ng-repeat="bulan in bulans">{{bulan.name}}</md-option>
+            </md-select>
+        </md-content>
+        <md-content>
+            <md-list class="speedy-margin-0">
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TARGET OMSET</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    100,000,000
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    10,000,000
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL OMSET</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    100,000,000
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    10,000,000
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TARGET OMSET</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    5%
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12%
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL KOMISI</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    100,000
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12,000
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">INVOICE DUE 7 HARI</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    100,000,0000
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12,000,000
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">INVOICE TERLAMBAT</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    100,000,000
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12,000,000
+                                </div>
+                            </div>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">% TARGET ACTUAL</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    5%
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12%
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">RATA-RATA % KOMISI</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    14%
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    18%
+                                </div>
+                            </div>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL PROSPEK</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    120
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    140
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL CORPORATE</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    7
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    45
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL BUSINESS</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    454
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    45
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL PERSONAl</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    45
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL PSP</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    555
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    120
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL DOP</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    50
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    120
+                                </div>
+                            </div>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL VISIT</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    5
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    12
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL PENAWARAN</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    555
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    125
+                                </div>
+                            </div>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line" class="speedy-margin-0">
+                        <div class="md-list-item-text" class="speedy-margin-0">
+                            <h4 style="color: #59086b;">TOTAL KONTRAK</h4>
+                            <div layout="row" class="speedy-list-item">
+                                <div flex class="text">
+                                    bulan ini
+                                </div>
+                                <div flex class="number">
+                                    54
+                                </div>
+                                <div flex class="text">
+                                    sebelumnya
+                                </div>
+                                <div flex class="number">
+                                    127
+                                </div>
+                            </div>
+                        </div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-card>
+            </md-list>
+        </md-content>
     </div>
- </div>
-<script src="assets/js/app.js"></script>
 </body>
 </html>

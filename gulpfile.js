@@ -2,7 +2,7 @@ var gulp = require("gulp"),
 sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
 browserSync = require("browser-sync"),
-webpack = require("webpack-stream");
+webpack = require("webpack");
 
 gulp.task("sass", function(){
     return gulp.src("./src/assets/sass/**/*.scss")
