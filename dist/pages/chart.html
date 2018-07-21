@@ -1,0 +1,132 @@
+<div ng-app="speedy" ng-controller="MyController" ng-init="loadData()">
+    <md-list class="label-chart" ng-init="init()">
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+            <div class="row" style="margin-top: 5px;">
+                <div class="column">
+                    <ol class="chart-legend span">                       
+                        <span style="background-color:#46BFBD"><i style="margin-left: 30px;">Bulan_ini</i></span>                              
+                    </ol>
+                </div>
+                <div class="column">
+                    <ol class="chart-legend span">
+                        <span style="background-color:#FDB45C"><i style="margin-left: 30px;">Sebelumnya</i></span>
+                    </ol>
+                </div>
+            </div>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>TARGET OMSET</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTao" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>TOTAL OMSET</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataToo" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+            </div>
+            <div layout="row">
+                <div flex>
+                    <label>TARGET KOMISI</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTo_o" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>TOTAL KOMISI</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTok" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+            </div>
+        </md-card>
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>INVOICE DUE 7 HARI</label>
+                    <canvas id="pie" class="chart chart-pie" chart-data="chartDataI7" chart-labels="labels" chart-colors="colour" chart-options="options">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>INVOICE TERLAMBAT</label>
+                    <canvas id="pie" class="chart chart-pie" chart-data="chartDataIt" chart-labels="labels" chart-colors="colour" chart-options="options">
+                    </canvas>
+                </div>
+            </div>
+        </md-card>
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>% TARGET ACTUAL</label>
+                    <canvas id="pie" class="chart chart-pie" chart-data="chartDataTac" chart-labels="labels" chart-colors="colour" chart-options="options">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>RATA-RATA & KOMISI</label>
+                    <canvas id="pie" class="chart chart-pie" chart-data="chartDataRk" chart-labels="labels" chart-colors="colour" chart-options="options">
+                    </canvas>
+                </div>
+            </div>
+        </md-card>
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>TOTAl PROSPEK</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTpr" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>TOTAL CORPORATE</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTc" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+            </div>
+            <div layout="row">
+                <div flex>
+                    <label>TOTAL BUSINESS</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTb" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>TOTAL PERSONAL</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTper" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+            </div>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>TOTAL PSP</label>
+                    <canvas id="pie" class="chart chart-pie" chart-data="chartDataTps" chart-labels="labels" chart-colors="colour" chart-options="options">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>TOTAL DOP</label>
+                    <canvas id="pie" class="chart chart-pie" chart-data="chartDataTdop" chart-labels="labels" chart-colors="colour" chart-options="options">
+                    </canvas>
+                </div>
+            </div>
+        </md-card>
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>TOTAl VISIT</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTvs" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div flex>
+                    <label>TOTAL PENAWARAN</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTpen" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+            </div>
+            <div layout="row" class="chart">
+                <div flex>
+                    <label>TOTAL KONTRAK</label>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartDataTkon" chart-colors="colour" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div flex>
+
+                </div>
+            </div>
+        </md-card>
+    </md-list>
+</div>
