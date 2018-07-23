@@ -24,9 +24,8 @@
 </head>
 
 <body ng-app="speedy">
-    <div ng-controller="MyController">
-        <section class="header-content">
-            <div layout="row" class="speedy-list-item" ng-init="init()">
+    <div ng-controller="MyController" ng-cloak>
+            <div layout="row" class="header-content" class="speedy-list-item" ng-init="init()">
                 <div flex>
                     <md-button id="btnRefresh" class="md-warn" style="margin-bottom: 0px;" ng-click="loadData()">Refresh</md-button>
                     <!-- <md-select class="sppedy-container" placeholder="Assign to bulan" ng-model="bulan" md-on-open="loadBulans()" style="min-width: 200px;position:sticky;"
@@ -40,10 +39,7 @@
                     </md-switch>
                 </div>
             </div>
-        </section>
-        <section>
-            <main ui-view></main>
-        </section>
+        <main ui-view></main>
     </div>
 </body>
 
