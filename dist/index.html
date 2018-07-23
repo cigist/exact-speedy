@@ -24,11 +24,11 @@
 </head>
 
 <body ng-app="speedy">
-    <div ng-app="speedy" ng-controller="MyController" class="sppedy-container" ng-cloak>
-        <md-content flex>
+    <div ng-controller="MyController">
+        <section class="header-content">
             <div layout="row" class="speedy-list-item" ng-init="init()">
                 <div flex>
-                    <md-button id="btnRefresh" class="md-warn"  style="margin-bottom: 0px;" ng-click="loadData()">Refresh</md-button>
+                    <md-button id="btnRefresh" class="md-warn" style="margin-bottom: 0px;" ng-click="loadData()">Refresh</md-button>
                     <!-- <md-select class="sppedy-container" placeholder="Assign to bulan" ng-model="bulan" md-on-open="loadBulans()" style="min-width: 200px;position:sticky;"
                         ng-change="loadData()">
                         <md-option ng-value="{{bulan.id}}" ng-repeat="bulan in bulans">{{bulan.name}}</md-option>
@@ -40,8 +40,11 @@
                     </md-switch>
                 </div>
             </div>
-        </md-content>
+        </section>
+        <section>
+            <main ui-view></main>
+        </section>
     </div>
-    <main ui-view></main>
 </body>
+
 </html>

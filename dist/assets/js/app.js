@@ -12,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         });
 });
 
-var server = 'http://api.exact.co.id/SE/';
+var server = 'https://www.exact.co.id/SE/';
 //var server = 'http://192.168.0.113:8084/SE/';
 function Post(service, vdata, result) {
     var httpServer = server + service;

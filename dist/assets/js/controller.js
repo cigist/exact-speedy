@@ -17,15 +17,33 @@ function formatRp(number) {
   }
   return vnumber;
 };
+function setCookie(cname, cvalue) {
+  document.cookie = cname + "=" + cvalue;
+}
+;
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') {
+          c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+          return c.substring(name.length, c.length);
+      }
+  }
+  return "";
+}
 function setLocal(){
-  if(getParameterByName('uid')!==null){
-    localStorage.setItem('uid',getParameterByName('uid'));
+  if(getParameterByName('uid')!==null || getParameterByName('uid')!=='' || getParameterByName('uid')!==undefined){
+    setCookie('uid',getParameterByName('uid'));
   }
 }
 setLocal();
 app.controller('MyController', function ($timeout, $scope, $state) {
   $scope.token = getParameterByName('token');
-  $scope.uid = localStorage.getItem('uid');
+  $scope.uid = getCookie('uid');
   $scope.bulan = 1;
   $scope.bulans = null;
   $scope.colour=['#46BFBD', '#FDB45C', '#949FB1', '#4D5360'];
