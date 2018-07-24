@@ -10,7 +10,6 @@ gulp.task("sass", function(){
       .pipe(autoprefixer())
       .pipe(gulp.dest("./dist/assets/css"))
 })
-
 gulp.task("script",function(){
     return gulp.src("./src/assets/js/app.js")
     .pipe(webpack(require("./webpack.config.js")))
