@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="./assets/lib/angular/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="./assets/lib/angular/angular.min.js"></script>
+    <script src="./assets/lib/angular/angular-animate.min.js"></script>
+    <script src="./assets/lib/angular/angular-aria.min.js"></script>
+    <script src="./assets/lib/angular/angular-messages.min.js"></script>
+    <script src="https://exact.co.id/lib/angular/angular-ui-router.min.js"></script>
+    <script src="https://exact.co.id/lib/moment/moment.js"></script>
+    <script src="https://exact.co.id/lib/jquery/jquery.min.js"></script>
+    <script src="https://exact.co.id/lib/loading/loadingoverlay.min.js"></script>
+    <script src="./assets/lib/angular-chart/chart.js"></script>
+    <script src="./assets/lib/angular-chart/angular-chart.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="./assets/lib/angular/angular-material.min.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="./assets/js/controller.js"></script>
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body ng-app="speedy">
+    <div ng-controller="MyController" ng-cloak>
+            <div layout="row" class="header-content" class="speedy-list-item" ng-init="init()">
+                <div flex>
+                    <md-button id="btnRefresh" class="md-warn" style="margin-bottom: 0px;" ng-click="loadData()">Refresh</md-button>
+                    <!-- <md-select class="sppedy-container" placeholder="Assign to bulan" ng-model="bulan" md-on-open="loadBulans()" style="min-width: 200px;position:sticky;"
+                        ng-change="loadData()">
+                        <md-option ng-value="{{bulan.id}}" ng-repeat="bulan in bulans">{{bulan.name}}</md-option>
+                    </md-select> -->
+                </div>
+                <div class="flex-30" style="margin-bottom: -20px;margin-top: -10;">
+                    <md-switch ng-model="data.cb6" aria-label="Switch 6" ng-change="onChange(data.cb6)">
+                        CHART
+                    </md-switch>
+                </div>
+            </div>
+        <main ui-view></main>
+    </div>
+</body>
+
+</html>
