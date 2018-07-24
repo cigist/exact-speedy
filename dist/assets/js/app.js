@@ -1,14 +1,10 @@
-var app = angular.module('speedy', ['ngMaterial','ui.router', 'ngMessages','chart.js'])
+var app = angular.module('saleskit', ['ui.router'])
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
     $stateProvider
         .state('/', {
             url: '/',
-            templateUrl: 'pages/list.html'
-        })
-        .state('chart', {
-            url: '/chart',
-            templateUrl: 'pages/chart.html'
+            templateUrl: 'index.html'
         });
 });
 
